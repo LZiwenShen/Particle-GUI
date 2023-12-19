@@ -96,21 +96,25 @@ namespace course
   void MainWindow::onTimer(wxTimerEvent& event)
   {
     // students must complete...
+    simulationOneStep();
   }
 
   void MainWindow::onSimulationStart(wxCommandEvent& event)
   {
     // students must complete...
+    simulationStart();
   }
 
   void MainWindow::onSimulationStop(wxCommandEvent& event)
   {
     // students must complete...
+    simulationStop();
   }
 
   void MainWindow::onSimulationReset(wxCommandEvent& event)
   {
     // students must complete...
+    simulationReset();
   }
 
   void MainWindow::simulationStart()

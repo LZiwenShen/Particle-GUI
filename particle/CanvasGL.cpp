@@ -139,12 +139,11 @@ namespace course
 
     //TODO: draw particle at correct position
 
-    //const Simulation& simulation{ wxGetApp().simulation() };
-    //const float x{ 0 };
-    //const float y{ 0 };
-    //const float r{ 0 };
-    //drawSphere(x, y, 0, r);
-
+    const Simulation& simulation{ wxGetApp().simulation() };
+    double x{ simulation.position().x() };
+    double y{ simulation.position().y() };
+    const double r{ simulation.radius() };
+    drawSphere(x, y, 0, r);
 
     glDisable(GL_COLOR_MATERIAL);
   }

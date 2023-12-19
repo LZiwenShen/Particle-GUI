@@ -9,6 +9,14 @@ namespace course
 {
   class Simulation
   {
+    double radius_;
+    double collision_;
+    Vector2d position_;
+    Vector2d velocity_;
+    bool running_;
+    double time_;
+    double energy_;
+
   public:
     Simulation();
 

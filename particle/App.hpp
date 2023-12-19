@@ -14,6 +14,8 @@ namespace course
 {
   class App : public wxApp
   {
+    MainWindow* window_;
+    Simulation* simulation_;
   public:
     App();
     virtual ~App();

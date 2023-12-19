@@ -11,39 +11,40 @@ namespace course
     wxApp{}
   {
     //create simulation
+    simulation_ = new Simulation{};
   }
 
   App::~App()
   {
     //delete simulation
+    delete[] simulation_;
   }
 
   bool App::OnInit()
   {
     //create window
+    window_ = new MainWindow{};
     return true;
   }
 
   const Simulation& App::simulation() const
   {
-    return {};
+    return *simulation_;
   }
 
   Simulation& App::simulation()
   {
-    static Simulation dummy;
-    return dummy;
+    return *simulation_;
   }
 
   const MainWindow& App::mainWindow() const
   {
-    return {};
+    return *window_;
   }
 
   MainWindow& App::mainWindow()
   {
-    static MainWindow dummy;
-    return dummy;
+    return *window_;
   }
 }
 

@@ -25,11 +25,18 @@ namespace course
 
   private:
     void onUpdateUI(wxUpdateUIEvent& event);
+    void onStartButtonClick(wxCommandEvent& event);
+    void onNextButtonClick(wxCommandEvent& event);
     void onResetButtonClick(wxCommandEvent& event);
 
+    wxToggleButton* startButton_;
+    wxButton* nextButton_;
     wxButton* resetButton_;
-
+    
     wxStaticBox* paramsBox_;
+    wxTextCtrl* Velocity_x;
+    wxTextCtrl* Velocity_y;
     wxTextCtrl* radius_;
+    wxTextCtrl* collision_;
   };
 }
